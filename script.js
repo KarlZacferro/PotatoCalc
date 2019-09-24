@@ -1,5 +1,3 @@
-// Este código está presente no arquivo HTML
-
 function createVar(){
 var idade = document.getElementById('idade').value
 var tempo = document.getElementById('tempo').value
@@ -13,7 +11,7 @@ if(sexo.value == 'm' && (parseInt(idade.value) + parseInt(tempo.value)>= 96) && 
     }else if(sexo.value == 'f' && (parseInt(idade.value) + parseInt(tempo.value) >= 86) && (idade.value >= 18) && idade.value > tempo.value){
         document.getElementById('result').innerHTML = "Você pode se aposentar!"
         document.getElementById('result').style.background = "#31D158"
-    }else if(tempo.value > idade.value){
+    }else if(parseInt(tempo.value) > parseInt(idade.value)){
         document.getElementById('result').innerHTML = "Tempo de contribuição é maior que a idade!"
         document.getElementById('result').style.background = "Black"
     }else if(tempo.value == idade.value && tempo.value != 0 && idade.value != 0){
